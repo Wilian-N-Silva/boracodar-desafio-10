@@ -1,0 +1,43 @@
+.air-quality {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__status {
+    font: 700 18px/1 "Lato", sans-serif;
+    color: $green;
+  }
+  &__value {
+    font: 400 40px/1.2 "Lato", sans-serif;
+    color: $purple-100;
+  }
+
+  &__index {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      align-items: center;
+    }
+    &-value {
+      font: 700 14px/1 "Lato", sans-serif;
+      color: $green;
+    }
+    &-title {
+      font: 400 12px/1 "Lato", sans-serif;
+      color: $purple-100;
+    }
+  }
+}

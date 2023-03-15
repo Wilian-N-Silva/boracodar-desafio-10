@@ -1,0 +1,86 @@
+.current-weather {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url("/background_darker.png") center / cover no-repeat;
+  object-fit: cover;
+  padding: 12px;
+  border-radius: 10px;
+  width: 100%;
+  gap: 32px;
+
+  @include screen-md {
+    gap: 0;
+    aspect-ratio: 1/1;
+    height: 480px;
+    width: 480px;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 20px;
+    gap: 4px;
+    font: 700 14px/1 "Lato", sans-serif;
+    color: $purple-300;
+
+    &-pin {
+      height: 20px;
+      aspect-ratio: 1/1;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    @include screen-md {
+      padding-bottom: 120px;
+    }
+  }
+
+  &__range {
+    display: flex;
+    font: 700 20px/1 "Lato", sans-serif;
+  }
+  &__min {
+    color: $purple-300;
+  }
+  &__max {
+    color: $white;
+  }
+
+  &__temperature {
+    display: flex;
+    align-items: start;
+    font: 700 4rem/125% "Lato", sans-serif;
+    color: $white;
+    position: relative;
+
+    @include screen-md {
+      font-size: 5.5rem;
+    }
+  }
+
+  &__temperature::after {
+    position: absolute;
+    content: "°C";
+    font: 700 24px/1 "Lato", sans-serif;
+    color: $purple-200;
+    padding-top: 16px;
+    top: 8px;
+    left: 100%;
+  }
+
+  &__info {
+    display: flex;
+    gap: 8px;
+  }
+}

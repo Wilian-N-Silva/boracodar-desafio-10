@@ -1,0 +1,56 @@
+.sun-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__diagram {
+    position: relative;
+    padding: 0 16px;
+
+    & span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font: 700 14px/1 "Lato", sans-serif;
+      color: $white;
+    }
+
+    svg {
+      position: relative;
+      #myMask {
+        rect {
+          animation: sunrise-mask 1s ease-in-out forwards;
+        }
+      }
+      circle {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        animation: sunrise-translate 1s ease-in-out forwards;
+      }
+    }
+  }
+
+  &__time {
+    display: flex;
+    justify-content: space-between;
+
+    & span {
+      font: 400 12px/1 "Lato", sans-serif;
+      color: $white;
+    }
+  }
+}
+
+@keyframes sunrise-mask {
+  from {
+    opacity: 0;
+    width: 0px;
+  }
+}
+@keyframes sunrise-translate {
+  from {
+    transform: rotate(0deg);
+  }
+}

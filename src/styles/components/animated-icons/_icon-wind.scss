@@ -1,0 +1,23 @@
+.icon-wind {
+  & path:nth-child(odd) {
+    animation: wind-blow 6s linear 1s infinite;
+  }
+  & path:nth-child(even) {
+    animation: wind-blow 3s linear 1s infinite;
+  }
+  @keyframes wind-blow {
+    0% {
+      opacity: 0;
+      transform: translateX(-3px);
+    }
+
+    25% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(2px);
+    }
+  }
+}

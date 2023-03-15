@@ -1,0 +1,29 @@
+// UTILITIES
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/colors";
+
+// BASE
+// @import "base/typography";
+@import "base/reset";
+@import "base/helpers";
+
+// COMPONENTS
+@import "components/background";
+@import "components/current-weather";
+@import "components/info-card";
+@import "components/weather-icon";
+@import "components/sun-tracker";
+@import "components/air-quality";
+@import "components/forecast";
+
+@import "components/animated-icons/icon-rain";
+@import "components/animated-icons/icon-humidity";
+@import "components/animated-icons/icon-wind";
+@import "components/animated-icons/icon-current-cloudly";
+
+// LAYOUT
+@import "layout/weather-info";
+
+// PAGES
+@import "pages/root";

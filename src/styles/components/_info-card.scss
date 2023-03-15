@@ -1,0 +1,38 @@
+.info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px;
+  align-items: center;
+  background-color: rgba($color: $purple-600, $alpha: 0.6);
+  border-radius: 6px;
+  width: 100%;
+
+  @include screen-md {
+    flex-direction: row;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: $purple-100;
+    font: 400 12px/1 "Lato", sans-serif;
+  }
+  &__value {
+    font: 700 18px/1 "Lato", sans-serif;
+    color: $purple-100;
+
+    &--suffix {
+      font: 700 14px/1 "Lato", sans-serif;
+      color: $purple-200;
+    }
+  }
+}
